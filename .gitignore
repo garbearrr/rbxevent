@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Build output
+out/
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Package locks
+package-lock.json
+
+.eslintrc
+.prettierrc
