@@ -9,6 +9,9 @@ export function EventModule<T>(): EventModule<T> {
 			Connections.set(Identifier, callback);
 			return Identifier;
 		},
+		Destroy(): void {
+			Connections.clear();
+		},
 		Disconnect(connection: EventConnection): void {
 			Connections.delete(connection);
 		},
@@ -24,6 +27,7 @@ export interface EventModuleParams<T> {}
 
 export interface EventModuleMethods<T> {
 	Connect(callback: (value: T) => void): EventConnection;
+	Destroy(): void;
 	Disconnect(connection: EventConnection): void;
 	Fire(value: T): void;
 }
