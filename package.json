@@ -2,14 +2,27 @@
   "name": "@rbxts/event",
   "version": "1.0.0",
   "description": "",
-  "main": "src/event.js",
+  "main": "out/init.lua",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garbearrr/Event.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "types": "types/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/garbearrr/Event/issues"
+  },
+  "homepage": "https://github.com/garbearrr/Event#readme",
+  "types": "out/index.d.ts",
   "files": [
-    "src",
-    "types"
+    "out",
+    "!**/*.tsbuildinfo"
   ],
   "publishConfig": {
     "access": "public"

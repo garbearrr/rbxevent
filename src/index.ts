@@ -1,9 +1,9 @@
-export default function EventModule<T>(): EventModuleMethods<T> {
+export function EventModule<T>(): EventModule<T> {
 	const Connections: Map<EventConnection, (value: T) => void> = new Map();
 
 	const state: EventModuleParams<T> = {};
 
-	const methods = (_state: EventModuleParams<T>): EventModuleMethods<T> => ({
+	const methods = (state: EventModuleParams<T>): EventModuleMethods<T> => ({
 		Connect(callback: (value: T) => void): EventConnection {
 			const Identifier = os.time();
 			Connections.set(Identifier, callback);
