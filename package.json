@@ -1,32 +1,26 @@
 {
-  "name": "@rbxts/event",
+  "name": "@rbxgar/event",
   "version": "1.0.0",
-  "description": "",
-  "main": "out/init.lua",
+  "description": "Event Module for Roblox",
+  "main": "src/mod.ts",
+  "types": "types/mod.d.ts",
+  "files": [
+    "src",
+    "types"
+  ],
   "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garbearrr/Event.git"
+    "url": "git+https://github.com/garbearrr/rbxevent.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "garbear",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/garbearrr/Event/issues"
+    "url": "https://github.com/garbearrr/rbxevent/issues"
   },
-  "homepage": "https://github.com/garbearrr/Event#readme",
-  "types": "out/index.d.ts",
-  "files": [
-    "out",
-    "!**/*.tsbuildinfo"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "homepage": "https://github.com/garbearrr/rbxevent#readme",
   "devDependencies": {
     "@rbxts/compiler-types": "^2.2.0-types.0",
     "@rbxts/types": "^1.0.721",
