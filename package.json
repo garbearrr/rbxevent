@@ -2,7 +2,7 @@
   "name": "@rbxts/event",
   "version": "1.0.0",
   "description": "",
-  "main": "out/init.lua",
+  "main": "src/event.ts",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
