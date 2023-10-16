@@ -1,4 +1,4 @@
-export function EventModule<T>(): EventModuleMethods<T> {
+export default function EventModule<T>(): EventModuleMethods<T> {
 	const Connections: Map<EventConnection, (value: T) => void> = new Map();
 
 	const state: EventModuleParams<T> = {};

@@ -2,12 +2,7 @@
   "name": "@rbxts/event",
   "version": "1.0.0",
   "description": "",
-  "main": "src/event.ts",
-  "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build"
-  },
+  "main": "src/event.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
