@@ -1,5 +1,3 @@
-import { EventConnection, EventModuleMethods, EventModuleParams } from "../out/index";
-
 export function EventModule<T>(): EventModuleMethods<T> {
 	const Connections: Map<EventConnection, (value: T) => void> = new Map();
 

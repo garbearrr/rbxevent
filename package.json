@@ -11,11 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "types": "out/index.d.ts",
+  "types": "types/index.d.ts",
   "files": [
-    "out",
     "src",
-    "!**/*.tsbuildinfo"
+    "types"
   ],
   "publishConfig": {
     "access": "public"
