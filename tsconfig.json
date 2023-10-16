@@ -22,5 +22,6 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"experimentalDecorators": true,
+    "outDir": "dist"
   }
 }

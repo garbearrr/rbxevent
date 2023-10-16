@@ -2,14 +2,13 @@
   "name": "@rbxgar/event",
   "version": "1.0.0",
   "description": "Event Module for Roblox",
-  "main": "src/mod.ts",
-  "types": "types/mod.d.ts",
+  "main": "dist/mod.js",
+  "types": "dist/mod.d.ts",
   "files": [
-    "src",
-    "types"
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
