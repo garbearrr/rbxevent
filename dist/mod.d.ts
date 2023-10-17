@@ -3,6 +3,7 @@ export interface EventModuleParams<T> {
 }
 export interface EventModuleMethods<T> {
     Connect(callback: (value: T) => void): EventConnection;
+    Destroy(): void;
     Disconnect(connection: EventConnection): void;
     Fire(value: T): void;
 }

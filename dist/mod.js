@@ -10,6 +10,9 @@ function EventModule() {
             Connections.set(Identifier, callback);
             return Identifier;
         },
+        Destroy() {
+            Connections.clear();
+        },
         Disconnect(connection) {
             Connections.delete(connection);
         },
