@@ -1,7 +1,11 @@
+import { BaseModule, DeclareModule } from "@rbxgar/basemodule";
+
 export function EventModule<T>(): EventModule<T> {
 	const Connections: Map<EventConnection, (value: T) => void> = new Map();
 
-	const state: EventModuleParams<T> = {};
+	const state: EventModuleParams<T> = {
+		IsDestroyed: false,
+	};
 
 	const methods = (state: EventModuleParams<T>): EventModuleMethods<T> => ({
 		Connect(callback: (value: T) => void): EventConnection {
@@ -20,10 +24,15 @@ export function EventModule<T>(): EventModule<T> {
 		},
 	});
 
-	return methods(state);
+	const IsDestroyed = (state: EventModuleParams<T>) => state.IsDestroyed;
+
+	const Module = { ...methods(state), IsDestroyed: () => IsDestroyed(state) };
+	return DeclareModule(Module);
 }
 
-export interface EventModuleParams<T> {}
+export interface EventModuleParams<T> {
+	IsDestroyed: boolean;
+}
 
 export interface EventModuleMethods<T> {
 	Connect(callback: (value: T) => void): EventConnection;
@@ -32,6 +41,6 @@ export interface EventModuleMethods<T> {
 	Fire(value: T): void;
 }
 
-export type EventModule<T> = EventModuleMethods<T> & EventModuleParams<T>;
+export type EventModule<T> = EventModuleMethods<T> & BaseModule;
 
 export type EventConnection = number;

@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && rbxtsc"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,8 @@
     "eslint-plugin-roblox-ts": "^0.0.36",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@rbxgar/basemodule": "github:garbearrr/rbxbasemod#main"
   }
 }
