@@ -1,6 +1,6 @@
 -- Compiled with roblox-ts v2.2.0
 local TS = _G[script]
-local DeclareModule = TS.import(script, TS.getModule(script, "@rbxgar", "basemodule").dist["mod"]).DeclareModule
+local DeclareModule = TS.import(script, TS.getModule(script, "@rbxgar", "basemodule").dist.mod).DeclareModule
 local function EventModule()
 	local Connections = {}
 	local state = {
