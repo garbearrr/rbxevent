@@ -2,13 +2,14 @@
   "name": "@rbxgar/event",
   "version": "1.0.0",
   "description": "Event Module for Roblox",
-  "main": "dist/mod.js",
+  "main": "dist/mod.lua",
   "types": "dist/mod.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc && rbxtsc"
+    "build": "rbxtsc",
+    "buildwatch": "rbxtsc -w"
   },
   "repository": {
     "type": "git",
